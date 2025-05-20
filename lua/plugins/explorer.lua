@@ -9,10 +9,7 @@ return {
 		dependencies = {
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
-				build = "make",
-				cond = function()
-					return vim.fn.executable("make") == 1
-				end,
+        build = (jit.os == "Windows") and "mingw32-make" or "make",
 			},
 			{ "nvim-telescope/telescope-ui-select.nvim" },
 			{ "nvim-telescope/telescope-file-browser.nvim" },
