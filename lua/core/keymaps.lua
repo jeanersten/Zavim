@@ -46,8 +46,9 @@ vim.keymap.set("n", "<Tab>", "<CMD> bnext <CR>", opts)
 vim.keymap.set("n", "<S-Tab>", "<CMD> bprevious <CR>", opts)
 
 -- Explorer
-vim.keymap.set("n", "<leader>se", "<CMD> Telescope file_browser <CR>", opts)
 vim.keymap.set("n", "<leader>sf", "<CMD> Telescope find_files <CR>", opts)
+vim.keymap.set("n", "<leader>se", "<CMD> Telescope file_browser <CR>", opts)
+vim.keymap.set("n", "<leader>sr", "<CMD> Telescope file_browser path=%:p:h select_buffer=true <CR>", opts)
 vim.keymap.set("n", "<leader>sg", "<CMD> Telescope live_grep <CR>", opts)
 vim.keymap.set("n", "<leader>sb", "<CMD> Telescope buffers <CR>", opts)
 vim.keymap.set("n", "<leader>sh", "<CMD> Telescope help_tags <CR>", opts)
